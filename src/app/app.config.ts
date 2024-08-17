@@ -6,14 +6,22 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideStore } from '@ngrx/store';
+import { environment } from '@environments/environment';
 
-export const appConfig: ApplicationConfig = {
+type AppConfig = ApplicationConfig &{
+  production: boolean;
+  API_URL: string;
+};
+
+export const appConfig: AppConfig = {
   providers: [
     provideAnimations(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(),
     NG_EVENT_PLUGINS,
-    provideStore()
-],
+    provideStore(),
+  ],
+  production: environment.production,
+  API_URL: environment.API_URL,
 };

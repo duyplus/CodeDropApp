@@ -18,19 +18,22 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"],
+    "baseUrl": "./src",
+
+    //Path
+    "paths": {
+      "@app/*": ["./app/*"],
+      "@environments/*": ["./environments/*"],
+      "@infrastructure/*": ["./infrastructure/*"],
+      "@config/*": ["./app/config/*"],
+      "@shared/*": ["./app/shared/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  },
-  
-  "paths": {
-      "@app/*": ["./src/app/*"],
-    },
+  }
 }
