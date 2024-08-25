@@ -49,6 +49,8 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "lodash": "^4.17.21",
+    "placeholder": "^1.2.2",
+    "plop": "^4.0.1",
     "tailwindcss": "^3.4.10",
     "typescript": "~5.5.2"
   }
