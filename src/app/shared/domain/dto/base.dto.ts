@@ -24,6 +24,6 @@ export type BaseDto = {
     pagination?: Pagination;
     totalItems: number;
     totalPages: number;
-    items: Dto[];
+    content: Dto[];
   };
   
