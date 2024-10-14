@@ -1,11 +1,14 @@
 import { BrowserRouter } from "react-router-dom";
+import { Main } from "@modules/main";
+import { ChakraProvider } from "@chakra-ui/react";
 
-const MainApp = () => {
+const App = () => {
   return (
+    <ChakraProvider>
       <BrowserRouter>
-        <p>Hello</p>
+        <Main />
       </BrowserRouter>
+    </ChakraProvider>
   );
 };
-
-export default MainApp;
+export default App;

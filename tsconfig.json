@@ -29,6 +29,7 @@
       "@config": ["./src/core/config/index.ts"],
       "@shared/*": ["./src/shared/*"],
       "@infrastructure/*": ["./src/infrastructure/*"],
+      "@modules/*": ["./src/modules/*"],
     },
 
   }
