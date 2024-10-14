@@ -3,7 +3,7 @@ import {
   BaseDto,
   BasePaginationDto,
   BaseQueryResponseDto,
-} from '@app/shared/domain';
+} from '@shared/domain';
 
 export type ReportDto = BaseDto & {
   link_original: string;

@@ -1,57 +1,79 @@
 {
   "name": "code-drop-app",
+  "private": true,
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:CodeDropApp": "node dist/code-drop-app/server/server.mjs"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "private": true,
   "dependencies": {
-    "@angular/animations": "^18.1.0",
-    "@angular/common": "^18.1.0",
-    "@angular/compiler": "^18.1.0",
-    "@angular/core": "^18.1.0",
-    "@angular/forms": "^18.1.0",
-    "@angular/platform-browser": "^18.1.0",
-    "@angular/platform-browser-dynamic": "^18.1.0",
-    "@angular/platform-server": "^18.1.0",
-    "@angular/router": "^18.1.0",
-    "@angular/ssr": "^18.1.4",
-    "@ngrx/store": "^18.0.2",
-    "@taiga-ui/cdk": "^4.0.1",
-    "@taiga-ui/core": "^4.0.1",
-    "@taiga-ui/icons": "^4.0.1",
-    "@taiga-ui/kit": "^4.0.1",
-    "@taiga-ui/styles": "^4.0.1",
+    "@emotion/styled": "^11.13.0",
+    "@hookform/resolvers": "^3.4.2",
+    "@nextui-org/react": "^2.4.8",
+    "@types/lodash": "^4.17.4",
+    "@types/node": "^20.12.12",
+    "antd": "^5.20.2",
+    "axios": "^1.7.2",
     "change-case-all": "^2.1.0",
-    "express": "^4.18.2",
+    "date-fns": "^3.6.0",
+    "elkjs": "^0.9.3",
+    "framer-motion": "^11.3.30",
+    "i": "^0.3.7",
+    "install": "^0.13.0",
+    "lodash": "^4.17.21",
     "moment": "^2.30.1",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "nanoid": "^5.0.7",
+    "npm": "^10.8.0",
+    "plop": "^4.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-drag-drop-files": "^2.3.10",
+    "react-dropzone": "^14.2.3",
+    "react-hook-form": "^7.51.5",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.1",
+    "tailwindcss": "^3.4.13",
+    "vite-tsconfig-paths": "^4.3.2",
+    "xlsx": "^0.18.5",
+    "yup": "^1.4.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.1.4",
-    "@angular/cli": "^18.1.4",
-    "@angular/compiler-cli": "^18.1.0",
-    "@types/express": "^4.17.17",
-    "@types/jasmine": "~5.1.0",
-    "@types/lodash": "^4.17.7",
-    "@types/node": "^18.18.0",
-    "jasmine-core": "~5.1.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
-    "lodash": "^4.17.21",
-    "placeholder": "^1.2.2",
-    "plop": "^4.0.1",
-    "tailwindcss": "^3.4.10",
-    "typescript": "~5.5.2"
+    "@types/d3-hierarchy": "^3.1.7",
+    "@types/dagre": "^0.7.52",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  },
+  "optionalDependencies": {
+    "@esbuild/linux-x64": "0.20.2",
+    "@rollup/rollup-linux-x64-gnu": "4.18.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
